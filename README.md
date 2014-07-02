@@ -274,7 +274,11 @@ In case if you are using postgres as database
 
 	sudo gem install bundler
 	sudo bundle install --deployment --without development test mysql aws
-	
+
+If you the pg gem should fail to install, use the following command instead ([as described here](http://www.uponmyshoulder.com/blog/2011/cant-find-the-postgresql-client-library-libpq/)):
+
+	sudo env ARCHFLAGS="-arch x86_64" bundle install --deployment --without development test mysql aws
+
 In case if you are using mysql as database
 
 	sudo gem install bundler
